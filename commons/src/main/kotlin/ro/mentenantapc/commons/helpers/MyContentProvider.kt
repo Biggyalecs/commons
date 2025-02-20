@@ -5,8 +5,7 @@ import android.net.Uri
 object MyContentProvider {
     private const val AUTHORITY = "ro.mentenantapc.android.provider"
     val MY_CONTENT_URI: Uri = Uri.parse("content://$AUTHORITY/settings")
-    const val SHARED_THEME_ACTIVATED = "ro.mentenantapc.commons.SHARED_THEME_ACTIVATED"
-    const val SHARED_THEME_UPDATED = "ro.mentenantapc.commons.SHARED_THEME_UPDATED"
+
     const val ACTION_GLOBAL_CONFIG_UPDATED = "ro.mentenantapc.android.GLOBAL_CONFIG_UPDATED"
     const val PERMISSION_WRITE_GLOBAL_SETTINGS = "ro.mentenantapc.android.permission.WRITE_GLOBAL_SETTINGS"
 
