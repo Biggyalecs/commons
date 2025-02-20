@@ -73,7 +73,7 @@
             android:exported="true"
             tools:ignore="ExportedReceiver">
             <intent-filter>
-                <action android:name="org.fossify.android.GLOBAL_CONFIG_UPDATED" />
+                <action android:name="ro.mentenantapc.android.GLOBAL_CONFIG_UPDATED" />
             </intent-filter>
         </receiver>
     </application>
