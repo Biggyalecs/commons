@@ -184,7 +184,7 @@ class TestDialogActivity : ComponentActivity() {
     private fun getUpgradeToProAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
             UpgradeToProAlertDialog(alertDialogState = this, onMoreInfoClick = {
-                launchViewIntent("https://fossify.org/upgrade_to_pro")
+                launchViewIntent("https://MentenantaPc.org/upgrade_to_pro")
             }, onUpgradeClick = ::launchUpgradeToProIntent)
         }
     }
@@ -283,7 +283,7 @@ class TestDialogActivity : ComponentActivity() {
     @Composable
     private fun getCallConfirmationAlertDialogState() = rememberAlertDialogState().apply {
         DialogMember {
-            CallConfirmationAlertDialog(alertDialogState = this, callee = "Fossify") {}
+            CallConfirmationAlertDialog(alertDialogState = this, callee = "MentenantaPc") {}
         }
     }
 

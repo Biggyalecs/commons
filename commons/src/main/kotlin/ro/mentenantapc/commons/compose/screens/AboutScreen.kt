@@ -77,7 +77,7 @@ internal fun HelpUsSection(
         if (showDonate) {
             TwoLinerTextItem(
                 click = onDonateClick,
-                text = stringResource(id = R.string.donate_to_fossify),
+                text = stringResource(id = R.string.donate_to_MentenantaPc),
                 icon = R.drawable.ic_donate_outline_vector
             )
         }

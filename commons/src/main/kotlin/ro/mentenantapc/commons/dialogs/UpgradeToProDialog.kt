@@ -53,7 +53,7 @@ class UpgradeToProDialog(val activity: Activity) {
     }
 
     private fun moreInfo() {
-        activity.launchViewIntent("https://fossify.org/upgrade_to_pro")
+        activity.launchViewIntent("https://MentenantaPc.org/upgrade_to_pro")
     }
 }
 

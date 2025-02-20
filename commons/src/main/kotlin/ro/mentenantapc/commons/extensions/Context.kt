@@ -279,7 +279,7 @@ fun Context.launchActivityIntent(intent: Intent) {
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
-    // if media content uri is null, get our custom uri like content://org.fossify.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
+    // if media content uri is null, get our custom uri like content://org.MentenantaPc.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg
     var uri = if (file.isMediaFile()) {
         getMediaContentUri(file.absolutePath)
     } else {
@@ -1005,9 +1005,9 @@ fun Context.getCornerRadius() = resources.getDimension(R.dimen.rounded_corner_ra
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {
-    return if (!packageName.startsWith("org.fossify.contacts") && !packageName.startsWith("org.fossify.phone")) {
+    return if (!packageName.startsWith("org.MentenantaPc.contacts") && !packageName.startsWith("org.MentenantaPc.phone")) {
         true
-    } else if ((packageName.startsWith("org.fossify.contacts") || packageName.startsWith("org.fossify.phone")) && isQPlus()) {
+    } else if ((packageName.startsWith("org.MentenantaPc.contacts") || packageName.startsWith("org.MentenantaPc.phone")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
@@ -1151,7 +1151,7 @@ fun Context.isNumberBlockedByPattern(number: String, blockedNumbers: ArrayList<B
 }
 
 fun Context.copyToClipboard(text: String) {
-    val clip = ClipData.newPlainText(getString(R.string.fossify_commons), text)
+    val clip = ClipData.newPlainText(getString(R.string.MentenantaPc_commons), text)
     (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
     val toastText = String.format(getString(R.string.value_copied_to_clipboard_show), text)
     toast(toastText)

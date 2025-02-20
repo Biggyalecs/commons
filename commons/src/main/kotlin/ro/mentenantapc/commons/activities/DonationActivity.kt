@@ -21,8 +21,8 @@ class DonationActivity : BaseComposeActivity() {
             val clipboardManager = LocalClipboardManager.current
             AppThemeSurface {
                 DonationScreen(
-                    donationOptions = FossifyDonationPlatforms,
-                    cryptoAddresses = FossifyCryptoAddresses,
+                    donationOptions = MentenantaPcDonationPlatforms,
+                    cryptoAddresses = MentenantaPcCryptoAddresses,
                     goBack = ::finish,
                     openWebsite = ::openWebsiteIntent,
                     copyToClipboard = {
@@ -35,10 +35,10 @@ class DonationActivity : BaseComposeActivity() {
     }
 }
 
-internal val FossifyDonationPlatforms = listOf(
+internal val MentenantaPcDonationPlatforms = listOf(
     Donation.Platform(
         fee = 0,
-        link = "https://github.com/sponsors/FossifyOrg",
+        link = "https://github.com/sponsors/MentenantaPcOrg",
         nameRes = R.string.github_sponsors,
         iconRes = R.drawable.ic_github_tinted_vector
     ),
@@ -50,7 +50,7 @@ internal val FossifyDonationPlatforms = listOf(
     ),
     Donation.Platform(
         fee = 10,
-        link = "https://opencollective.com/fossify/donate?interval=month&amount=20",
+        link = "https://opencollective.com/MentenantaPc/donate?interval=month&amount=20",
         nameRes = R.string.opencollective,
         iconRes = R.drawable.ic_open_collective_vector
     ),
@@ -69,7 +69,7 @@ internal val FossifyDonationPlatforms = listOf(
 )
 
 @Suppress("SpellCheckingInspection")
-internal val FossifyCryptoAddresses = listOf(
+internal val MentenantaPcCryptoAddresses = listOf(
     Donation.Crypto(
         address = "bc1qn5h97qdqsazpzvxm7gryke6vmrcx85t7neqp95",
         iconRes = R.drawable.ic_bitcoin_vector,

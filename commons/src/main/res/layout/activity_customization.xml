@@ -204,11 +204,11 @@
                 layout="@layout/divider" />
 
             <TextView
-                android:id="@+id/settings_all_fossify_apps_label"
+                android:id="@+id/settings_all_MentenantaPc_apps_label"
                 style="@style/SettingsSectionLabelStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/all_fossify_apps" />
+                android:text="@string/all_MentenantaPc_apps" />
 
             <RelativeLayout
                 android:id="@+id/apply_to_all_holder"

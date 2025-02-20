@@ -19,8 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ro.mentenantapc.commons.R
-import ro.mentenantapc.commons.activities.FossifyCryptoAddresses
-import ro.mentenantapc.commons.activities.FossifyDonationPlatforms
+import ro.mentenantapc.commons.activities.MentenantaPcCryptoAddresses
+import ro.mentenantapc.commons.activities.MentenantaPcDonationPlatforms
 import ro.mentenantapc.commons.compose.lists.SimpleColumnScaffold
 import ro.mentenantapc.commons.compose.settings.SettingsGroup
 import ro.mentenantapc.commons.compose.settings.SettingsHorizontalDivider
@@ -40,7 +40,7 @@ fun DonationScreen(
     openWebsite: (String) -> Unit,
     copyToClipboard: (String) -> Unit,
 ) {
-    SimpleColumnScaffold(title = stringResource(id = R.string.donate_to_fossify), goBack = goBack) {
+    SimpleColumnScaffold(title = stringResource(id = R.string.donate_to_MentenantaPc), goBack = goBack) {
         DonationPlatforms(
             options = donationOptions,
             copyToClipboard = copyToClipboard,
@@ -157,8 +157,8 @@ fun DonationListItem(
 @Preview
 fun PreviewDonationScreen() {
     DonationScreen(
-        donationOptions = FossifyDonationPlatforms,
-        cryptoAddresses = FossifyCryptoAddresses,
+        donationOptions = MentenantaPcDonationPlatforms,
+        cryptoAddresses = MentenantaPcCryptoAddresses,
         goBack = {},
         openWebsite = {},
         copyToClipboard = {},

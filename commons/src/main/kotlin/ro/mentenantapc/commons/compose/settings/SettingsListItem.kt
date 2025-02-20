@@ -154,7 +154,7 @@ private fun PreviewSettingsListItem(@PreviewParameter(BooleanPreviewParameterPro
     AppThemeSurface {
         SettingsListItem(
             click = {},
-            text = "Fossify",
+            text = "MentenantaPc",
             icon = if (isImage) R.drawable.ic_telegram_vector else R.drawable.ic_dollar_vector,
             isImage = isImage
         )

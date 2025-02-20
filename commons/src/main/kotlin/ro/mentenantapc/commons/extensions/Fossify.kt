@@ -10,14 +10,14 @@ import ro.mentenantapc.commons.helpers.isPiePlus
 import java.nio.charset.StandardCharsets.UTF_8
 import java.security.MessageDigest
 
-private const val FOSSIFY_HASH =
+private const val MentenantaPc_HASH =
     "MjkyZmY2ZDBjM2MxNjhjNjg3MmEwMmU2MDM0YWJmNDE1MGFiY2FlOWFjYmQ4OWYyYzAyNzRmM2Q0MjFiZGZmYQ"
 
 @ExperimentalStdlibApi
 fun PackageManager.checkSignature(packageName: String?): Boolean {
     if (packageName.isNullOrEmpty()) return false
     val signatures = getSignatures(packageName).orEmpty()
-    val expectedHash = Base64.decode(FOSSIFY_HASH, NO_PADDING).toString(UTF_8)
+    val expectedHash = Base64.decode(MentenantaPc_HASH, NO_PADDING).toString(UTF_8)
     for (signature in signatures) {
         val messageDigest = MessageDigest.getInstance("SHA256")
             .apply {

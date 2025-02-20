@@ -1222,8 +1222,8 @@
     <ID>MaxLineLength:Activity.kt$if</ID>
     <ID>MaxLineLength:Activity.kt$return</ID>
     <ID>MaxLineLength:Activity.kt$showPickSecondsDialog(seconds, isSnoozePicker, showSecondsAtCustomDialog, showDuringDayOption, cancelCallback, callback)</ID>
-    <ID>MaxLineLength:Activity.kt$val packageName = if (baseConfig.appId.contains(".debug", true)) "org.fossify.phone.debug" else "org.fossify.phone"</ID>
-    <ID>MaxLineLength:ActivityExtensions.kt$"You are using a fake version of the app. For your own safety download the original one from www.fossify.org. Thanks"</ID>
+    <ID>MaxLineLength:Activity.kt$val packageName = if (baseConfig.appId.contains(".debug", true)) "org.MentenantaPc.phone.debug" else "org.MentenantaPc.phone"</ID>
+    <ID>MaxLineLength:ActivityExtensions.kt$"You are using a fake version of the app. For your own safety download the original one from www.MentenantaPc.org. Thanks"</ID>
     <ID>MaxLineLength:ActivityExtensions.kt$fun</ID>
     <ID>MaxLineLength:AlertDialog.kt$// in dialogs, lets use findViewById, because while some dialogs use MyEditText, material theme dialogs use TextInputEditText so the system takes care of it</ID>
     <ID>MaxLineLength:AlertDialogsExtensions.kt$is Theme.SystemDefaultMaterialYou -&gt; if (isSPlus()) colorResource(R.color.you_dialog_background_color) else SimpleTheme.colorScheme.surface</ID>
@@ -1285,7 +1285,7 @@
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$startCopyMove(fileDirItems, destination, isCopyOperation, copyPhotoVideoOnly, copyHidden)</ID>
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$val</ID>
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$val drawableId = if (toolbarNavigationIcon == NavigationIcon.Cross) R.drawable.ic_cross_vector else R.drawable.ic_arrow_left_vector</ID>
-    <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$val label = "You are using a fake version of the app. For your own safety download the original one from www.fossify.org. Thanks"</ID>
+    <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$val label = "You are using a fake version of the app. For your own safety download the original one from www.MentenantaPc.org. Thanks"</ID>
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$val recoverableSecurityException = securityException as? RecoverableSecurityException ?: throw securityException</ID>
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$var isMaterialActivity = false // by material activity we mean translucent navigation bar and opaque status and action bars</ID>
     <ID>MaxLineLength:BaseSimpleActivity.kt$BaseSimpleActivity$window.decorView.systemUiVisibility = window.decorView.systemUiVisibility.addBit(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)</ID>
@@ -1367,7 +1367,7 @@
     <ID>MaxLineLength:Context-styling.kt$fun Context.isWhiteTheme()</ID>
     <ID>MaxLineLength:Context-styling.kt$showCheckmarksOnSwitches = cursor.getIntValue(MyContentProvider.COL_SHOW_CHECKMARKS_ON_SWITCHES) != 0</ID>
     <ID>MaxLineLength:Context-styling.kt$val state = if (enable) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED</ID>
-    <ID>MaxLineLength:Context.kt$// if media content uri is null, get our custom uri like content://org.fossify.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg</ID>
+    <ID>MaxLineLength:Context.kt$// if media content uri is null, get our custom uri like content://org.MentenantaPc.gallery.provider/external_files/emulated/0/DCIM/IMG_20171104_233915.jpg</ID>
     <ID>MaxLineLength:Context.kt$fun</ID>
     <ID>MaxLineLength:Context.kt$fun Context.getCanAppBeUpgraded()</ID>
     <ID>MaxLineLength:Context.kt$fun Context.getDefaultAlarmSound(type: Int)</ID>

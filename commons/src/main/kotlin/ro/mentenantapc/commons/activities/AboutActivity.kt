@@ -105,7 +105,7 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun getGithubUrl(): String {
-        return "https://github.com/FossifyOrg/${intent.getStringExtra(APP_REPOSITORY_NAME)}"
+        return "https://github.com/MentenantaPcOrg/${intent.getStringExtra(APP_REPOSITORY_NAME)}"
     }
 
     @Composable
@@ -218,7 +218,7 @@ class AboutActivity : BaseComposeActivity() {
         val separator = "------------------------------"
         val body = "$appVersion$newline$deviceOS$newline$separator$newline$newline"
 
-        val address = if (packageName.startsWith("org.fossify")) {
+        val address = if (packageName.startsWith("org.MentenantaPc")) {
             getString(R.string.my_email)
         } else {
             getString(R.string.my_fake_email)
@@ -295,22 +295,22 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun onGithubClick() {
-        launchViewIntent("https://github.com/FossifyOrg")
+        launchViewIntent("https://github.com/MentenantaPcOrg")
     }
 
     private fun onRedditClick() {
-        launchViewIntent("https://www.reddit.com/r/Fossify")
+        launchViewIntent("https://www.reddit.com/r/MentenantaPc")
     }
 
 
     private fun onTelegramClick() {
-        launchViewIntent("https://t.me/Fossify")
+        launchViewIntent("https://t.me/MentenantaPc")
     }
 
     private fun onPrivacyPolicyClick() {
         val appId = baseConfig.appId.removeSuffix(".debug").removeSuffix(".pro")
-            .removePrefix("org.fossify.")
-        val url = "https://www.fossify.org/policy/$appId"
+            .removePrefix("org.MentenantaPc.")
+        val url = "https://www.MentenantaPc.org/policy/$appId"
         launchViewIntent(url)
     }
 

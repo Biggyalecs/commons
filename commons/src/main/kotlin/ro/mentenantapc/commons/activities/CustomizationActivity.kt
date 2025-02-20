@@ -518,7 +518,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun pickPrimaryColor() {
-        if (!packageName.startsWith("org.fossify.", true) && baseConfig.appRunCount > 50) {
+        if (!packageName.startsWith("org.MentenantaPc.", true) && baseConfig.appRunCount > 50) {
             finish()
             return
         }
@@ -609,7 +609,7 @@ class CustomizationActivity : BaseSimpleActivity() {
     }
 
     private fun updateHeaderColors(primaryColor: Int = getProperPrimaryColor()) {
-        arrayListOf(binding.settingsThemeAndColorsLabel, binding.settingsAllFossifyAppsLabel).forEach {
+        arrayListOf(binding.settingsThemeAndColorsLabel, binding.settingsAllMentenantaPcAppsLabel).forEach {
             it.setTextColor(primaryColor)
         }
     }
@@ -654,7 +654,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         val showThankYouFeatures = canAccessGlobalConfig()
         binding.applyToAllHolder.beVisibleIf(showThankYouFeatures)
         binding.applyToAllDivider.root.beVisibleIf(showThankYouFeatures)
-        binding.settingsAllFossifyAppsLabel.beVisibleIf(showThankYouFeatures)
+        binding.settingsAllMentenantaPcAppsLabel.beVisibleIf(showThankYouFeatures)
         binding.settingsThemeAndColorsLabel.beVisibleIf(showThankYouFeatures)
         binding.applyToAll.isChecked = baseConfig.isGlobalThemeEnabled
         updateApplyToAllColors()
