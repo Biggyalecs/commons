@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
-        <package android:name="org.fossify.thankyou.debug" />
-        <package android:name="org.fossify.thankyou" />
+        <package android:name="ro.mentenantapc.thankyou.debug" />
+        <package android:name="ro.mentenantapc.thankyou" />
     </queries>
 
     <uses-feature

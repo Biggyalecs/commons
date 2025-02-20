@@ -489,7 +489,7 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
     return mimeType
 }
 
-fun Context.isThankYouInstalled() = isPackageInstalled("org.fossify.thankyou")
+fun Context.isThankYouInstalled() = isPackageInstalled("ro.mentenantapc.thankyou")
 
 fun Context.canAccessGlobalConfig(): Boolean {
     return isThankYouInstalled() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED
@@ -508,7 +508,7 @@ fun Context.isOrWasThankYouInstalled(): Boolean {
     }
 }
 
-fun Context.isAProApp() = packageName.startsWith("org.fossify.") && packageName.removeSuffix(".debug").endsWith(".pro")
+fun Context.isAProApp() = packageName.startsWith("ro.mentenantapc.") && packageName.removeSuffix(".debug").endsWith(".pro")
 
 fun Context.getCustomizeColorsString(): String {
     val textId = if (isOrWasThankYouInstalled()) {
@@ -710,7 +710,7 @@ fun Context.saveExifRotation(exif: ExifInterface, degrees: Int) {
 
 fun Context.getLaunchIntent() = packageManager.getLaunchIntentForPackage(baseConfig.appId)
 
-fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("org.fossify."))
+fun Context.getCanAppBeUpgraded() = proPackages.contains(baseConfig.appId.removeSuffix(".debug").removePrefix("ro.mentenantapc."))
 
 fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseConfig.appId.removeSuffix(".debug")}.pro"
 
