@@ -56,7 +56,7 @@ internal val MentenantaPcDonationPlatforms = listOf(
     ),
     Donation.Platform(
         fee = 10,
-        link = "https://www.patreon.com/naveen3singh",
+        link = "https://www.patreon.com/Biggyalecs",
         nameRes = R.string.patreon,
         iconRes = R.drawable.ic_patreon_vector
     ),
