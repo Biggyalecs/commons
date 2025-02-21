@@ -28,6 +28,7 @@ import android.provider.OpenableColumns
 import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -53,6 +54,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import kotlin.text.removeSuffix
 
 fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE)
 
@@ -489,7 +491,20 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
     return mimeType
 }
 
-fun Context.isThankYouInstalled() = isPackageInstalled("ro.mentenantapc.thankyou")
+fun Context.isThankYouInstalled(): Boolean {
+    val packageManager = packageManager
+    val packages = packageManager.getInstalledPackages(0)
+
+    for (pkg in packages) {
+        Log.d("AppCheck", "Installed package: ${pkg.packageName}")
+        if (pkg.packageName.startsWith("ro.mentenantapc.thankyou")) {
+            Log.d("AppCheck", "Found matching package: ${pkg.packageName}")
+            return true
+        }
+    }
+    Log.d("AppCheck", "No matching package found")
+    return false
+}
 
 fun Context.canAccessGlobalConfig(): Boolean {
     return isThankYouInstalled() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED
@@ -528,11 +543,11 @@ fun Context.addLockedLabelIfNeeded(stringId: Int): String {
     }
 }
 
-fun Context.isPackageInstalled(pkgName: String): Boolean {
+fun Context.isPackageInstalled(packageName: String): Boolean {
     return try {
-        packageManager.getPackageInfo(pkgName, 0)
+        packageManager.getPackageInfo(packageName, 0)
         true
-    } catch (e: Exception) {
+    } catch (e: PackageManager.NameNotFoundException) {
         false
     }
 }
