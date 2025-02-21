@@ -91,7 +91,7 @@ fun ComponentActivity.upgradeToPro() {
     launchViewIntent("https://mentenantapc.ro/upgrade_to_pro")
 }
 
-const val DEVELOPER_PLAY_STORE_URL = "https://play.google.com/store/apps/dev?id=7297838378654322558"
+const val DEVELOPER_PLAY_STORE_URL = "https://play.google.com/store/apps/dev?id=8355595706203257912"
 const val FAKE_VERSION_APP_LABEL =
     "You are using a fake version of the app. For your own safety download the original one from www.mentenantapc.ro. Thanks"
 
