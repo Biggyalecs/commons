@@ -99,38 +99,22 @@ class FilepickerItemsAdapter(
                     .centerCrop()
                     .error(placeholder)
 
-                var itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
+                val itemToLoad = if (fileDirItem.name.endsWith(".apk", true)) {
                     val packageInfo = root.context.packageManager.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES)
-                    if (packageInfo != null) {
-                        val appInfo = packageInfo.applicationInfo
+                    packageInfo?.applicationInfo?.let { appInfo ->
                         appInfo.sourceDir = path
                         appInfo.publicSourceDir = path
                         appInfo.loadIcon(root.context.packageManager)
-                    } else {
-                        path
-                    }
+                    } ?: path
                 } else {
                     path
                 }
 
-                if (!activity.isDestroyed && !activity.isFinishing) {
-                    if (activity.isRestrictedSAFOnlyRoot(path)) {
-                        itemToLoad = activity.getAndroidSAFUri(path)
-                    } else if (hasOTGConnected && itemToLoad is String && activity.isPathOnOTG(itemToLoad)) {
-                        itemToLoad = itemToLoad.getOTGPublicPath(activity)
-                    }
-
-                    if (itemToLoad.toString().isGif()) {
-                        Glide.with(activity).asBitmap().load(itemToLoad).apply(options).into(listItemIcon)
-                    } else {
-                        Glide.with(activity)
-                            .load(itemToLoad)
-                            .transition(withCrossFade())
-                            .apply(options)
-                            .transform(CenterCrop(), RoundedCorners(cornerRadius))
-                            .into(listItemIcon)
-                    }
-                }
+                // Load the itemToLoad using Glide or any other image loading library
+                Glide.with(root.context)
+                    .load(itemToLoad)
+                    .apply(options)
+                    .into(listItemIcon)
             }
         }
     }
