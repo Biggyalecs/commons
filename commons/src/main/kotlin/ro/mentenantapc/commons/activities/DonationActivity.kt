@@ -65,22 +65,22 @@ internal val MentenantaPcDonationPlatforms = listOf(
 @Suppress("SpellCheckingInspection")
 internal val MentenantaPcCryptoAddresses = listOf(
     Donation.Crypto(
-        address = "bc1qn5h97qdqsazpzvxm7gryke6vmrcx85t7neqp95",
+        address = "3PrmXk66GCyNp21utmRwSfAnr4BTyWiimw",
         iconRes = R.drawable.ic_bitcoin_vector,
         nameRes = R.string.bitcoin_btc
     ),
     Donation.Crypto(
-        address = "0x9354fC372BC3BdA58766a8a9Fabadf77A76CdE01",
+        address = "0x0ae97452f892a13b727bb1499f87213a99516067",
         iconRes = R.drawable.ic_ethereum_vector,
         nameRes = R.string.ethereum_eth
     ),
     Donation.Crypto(
-        address = "48FkVUcJ7AGeBMR4SC4J7QU5nAt6YNwKZWz6sGDT1s5haEY7reZtJr5CniXLaQzTzGAuZNoc83BQAcETHw1d3Lkn8AAf1XF",
-        iconRes = R.drawable.ic_monero_vector,
-        nameRes = R.string.monero_xmr
+        address = "Lb61JP7BxwXKUikEbo3CKBEo9tg8bgF2Tr",
+        iconRes = R.drawable.ic_litecoin_ltc,
+        nameRes = R.string.litecoin_ltc
     ),
     Donation.Crypto(
-        address = "TGi4VpD1D9A9ZvyP9d3aVowwzMSvev2hub",
+        address = "TWMNoqCrZDiGQ2miznEHpoBniC7RJpNmec",
         iconRes = R.drawable.ic_tron_vector,
         nameRes = R.string.tron_trx
     )
