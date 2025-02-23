@@ -50,12 +50,6 @@ internal val MentenantaPcDonationPlatforms = listOf(
     ),
     Donation.Platform(
         fee = 10,
-        link = "https://opencollective.com/MentenantaPc/donate?interval=month&amount=20",
-        nameRes = R.string.opencollective,
-        iconRes = R.drawable.ic_open_collective_vector
-    ),
-    Donation.Platform(
-        fee = 10,
         link = "https://www.patreon.com/Biggyalecs",
         nameRes = R.string.patreon,
         iconRes = R.drawable.ic_patreon_vector
