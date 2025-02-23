@@ -38,7 +38,7 @@ class DonationActivity : BaseComposeActivity() {
 internal val MentenantaPcDonationPlatforms = listOf(
     Donation.Platform(
         fee = 0,
-        link = "https://github.com/sponsors/MentenantaPcOrg",
+        link = "https://github.com/sponsors/Biggyalecs",
         nameRes = R.string.github_sponsors,
         iconRes = R.drawable.ic_github_tinted_vector
     ),
@@ -62,7 +62,7 @@ internal val MentenantaPcDonationPlatforms = listOf(
     ),
     Donation.Platform(
         fee = 5,
-        link = "https://paypal.me/naveen3singh",
+        link = "https://www.paypal.com/donate/?hosted_button_id=JF436PD48C6T2",
         nameRes = R.string.paypal,
         iconRes = R.drawable.ic_paypal_vector
     ),
