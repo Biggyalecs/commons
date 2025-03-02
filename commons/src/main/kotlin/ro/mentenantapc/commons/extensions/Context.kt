@@ -1007,9 +1007,9 @@ fun Context.getCornerRadius() = resources.getDimension(R.dimen.rounded_corner_ra
 
 // we need the Default Dialer functionality only in Simple Dialer and in Simple Contacts for now
 fun Context.isDefaultDialer(): Boolean {
-    return if (!packageName.startsWith("org.MentenantaPc.contacts") && !packageName.startsWith("org.MentenantaPc.phone")) {
+    return if (!packageName.startsWith("ro.mentenantapc.contacts") && !packageName.startsWith("ro.mentenantapc.phone")) {
         true
-    } else if ((packageName.startsWith("org.MentenantaPc.contacts") || packageName.startsWith("org.MentenantaPc.phone")) && isQPlus()) {
+    } else if ((packageName.startsWith("ro.mentenantapc.contacts") || packageName.startsWith("ro.mentenantapc.phone")) && isQPlus()) {
         val roleManager = getSystemService(RoleManager::class.java)
         roleManager!!.isRoleAvailable(RoleManager.ROLE_DIALER) && roleManager.isRoleHeld(RoleManager.ROLE_DIALER)
     } else {
