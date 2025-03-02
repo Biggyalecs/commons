@@ -299,7 +299,7 @@ class AboutActivity : BaseComposeActivity() {
     }
 
     private fun onRedditClick() {
-        launchViewIntent("https://www.reddit.com/r/MentenantaPc")
+        launchViewIntent("https://www.reddit.com/r/MPCApps")
     }
 
 
