@@ -491,20 +491,7 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
     return mimeType
 }
 
-fun Context.isThankYouInstalled(): Boolean {
-    val packageManager = packageManager
-    val packages = packageManager.getInstalledPackages(0)
-
-    for (pkg in packages) {
-        Log.d("AppCheck", "Installed package: ${pkg.packageName}")
-        if (pkg.packageName.startsWith("ro.mentenantapc.thankyou")) {
-            Log.d("AppCheck", "Found matching package: ${pkg.packageName}")
-            return true
-        }
-    }
-    Log.d("AppCheck", "No matching package found")
-    return false
-}
+fun Context.isThankYouInstalled() = isPackageInstalled("ro.mentenantapc.thankyou")
 
 fun Context.canAccessGlobalConfig(): Boolean {
     return isThankYouInstalled() && ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_GLOBAL_SETTINGS) == PERMISSION_GRANTED
@@ -543,11 +530,11 @@ fun Context.addLockedLabelIfNeeded(stringId: Int): String {
     }
 }
 
-fun Context.isPackageInstalled(packageName: String): Boolean {
+fun Context.isPackageInstalled(pkgName: String): Boolean {
     return try {
-        packageManager.getPackageInfo(packageName, 0)
+        packageManager.getPackageInfo(pkgName, 0)
         true
-    } catch (e: PackageManager.NameNotFoundException) {
+    } catch (e: Exception) {
         false
     }
 }
