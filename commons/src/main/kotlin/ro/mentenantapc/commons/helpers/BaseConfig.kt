@@ -17,6 +17,7 @@ import java.util.Calendar
 import java.util.LinkedList
 import java.util.Locale
 import kotlin.reflect.KProperty0
+import androidx.core.content.edit
 
 open class BaseConfig(val context: Context) {
     protected val prefs = context.getSharedPrefs()
@@ -268,14 +269,14 @@ open class BaseConfig(val context: Context) {
         if (path.isEmpty()) {
             sorting = value
         } else {
-            prefs.edit().putInt(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()), value).apply()
+            prefs.edit { putInt(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()), value)}
         }
     }
 
     fun getFolderSorting(path: String) = prefs.getInt(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()), sorting)
 
     fun removeCustomSorting(path: String) {
-        prefs.edit().remove(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault())).apply()
+        prefs.edit { remove(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault())) }
     }
 
     fun hasCustomSorting(path: String) = prefs.contains(SORT_FOLDER_PREFIX + path.lowercase(Locale.getDefault()))
@@ -406,15 +407,15 @@ open class BaseConfig(val context: Context) {
 
     var wasOTGHandled: Boolean
         get() = prefs.getBoolean(WAS_OTG_HANDLED, false)
-        set(wasOTGHandled) = prefs.edit().putBoolean(WAS_OTG_HANDLED, wasOTGHandled).apply()
+        set(wasOTGHandled) = prefs.edit {putBoolean(WAS_OTG_HANDLED, wasOTGHandled) }
 
     var wasUpgradedFromFreeShown: Boolean
         get() = prefs.getBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, false)
-        set(wasUpgradedFromFreeShown) = prefs.edit().putBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, wasUpgradedFromFreeShown).apply()
+        set(wasUpgradedFromFreeShown) = prefs.edit {putBoolean(WAS_UPGRADED_FROM_FREE_SHOWN, wasUpgradedFromFreeShown) }
 
     var wasRateUsPromptShown: Boolean
         get() = prefs.getBoolean(WAS_RATE_US_PROMPT_SHOWN, false)
-        set(wasRateUsPromptShown) = prefs.edit().putBoolean(WAS_RATE_US_PROMPT_SHOWN, wasRateUsPromptShown).apply()
+        set(wasRateUsPromptShown) = prefs.edit {putBoolean(WAS_RATE_US_PROMPT_SHOWN, wasRateUsPromptShown) }
 
     var wasAppRated: Boolean
         get() = prefs.getBoolean(WAS_APP_RATED, false)

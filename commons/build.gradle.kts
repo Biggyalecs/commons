@@ -83,7 +83,7 @@ publishing {
             }
             groupId = "com.github.Biggyalecs" // Schimbă cu ID-ul tău de grup
             artifactId = "commons" // Numele pachetului
-            version = "1.0.0"
+            version = "2.6.0"
         }
     }
 }
